@@ -48,7 +48,8 @@ def enkephalinRecharge(pageFrame):
     
     # Calculate button
     calculateButton = ttk.Button(frame, text="Calculate Max Time", command=timeToMax)
-    calculateButton.bind('<Return>',lambda event:timeToMax())
+    maxEnkephalinEntry.bind('<Return>', lambda event: timeToMax())
+    currentEnkephalinEntry.bind('<Return>', lambda event: timeToMax())
     calculateButton.place(x=5, y=220, width=170, height=40)
     
     # Maxed Enkephalin result

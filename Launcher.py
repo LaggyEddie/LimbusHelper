@@ -33,7 +33,7 @@ enkephalinRecharge(pageFrame)
 
 # side panel
 def switchIndication(indicatorLb, page):
-    for indicator in [enkephalinBtnIndicator, moduleBtnIndicator, crateBtnIndicator, sinnerBtnIndicator]:
+    for indicator in [enkephalinBtnIndicator, moduleBtnIndicator, crateBtnIndicator, teamsExampleBtnIndicator]:
         indicator.config(bg=sidePanelColor)
     indicatorLb.config(bg="white")
     if sidePanelFrame.winfo_width() > 50:
@@ -95,13 +95,13 @@ crateLb = tk.Label(sidePanelFrame, text="Crates Estimator", bg=sidePanelColor, f
 crateLb.place(x=50, y=230, width=200, height=40)
 crateLb.bind("<Button-1>", lambda e: switchIndication(indicatorLb=crateBtnIndicator, page=cratesEstimator))
 
-sinnerBtn = tk.Button(sidePanelFrame, image=sinnerIcon, bg=sidePanelColor, bd=0, activebackground=sidePanelColor, command=lambda: switchIndication(indicatorLb=sinnerBtnIndicator, page=sinner))
-sinnerBtn.place(x=6, y=280)
-sinnerBtnIndicator = tk.Label(sidePanelFrame, bg=sidePanelColor)
-sinnerBtnIndicator.place(x=3, y=285, height=30, width=3)
-sinnerLb = tk.Label(sidePanelFrame, text="Sinner (maybe)", bg=sidePanelColor, fg="white", font=("Bold", 15), anchor=tk.W)
-sinnerLb.place(x=50, y=280, width=200, height=40)
-sinnerLb.bind("<Button-1>", lambda e: switchIndication(indicatorLb=sinnerBtnIndicator, page=sinner))
+teamsExampleBtn = tk.Button(sidePanelFrame, image=sinnerIcon, bg=sidePanelColor, bd=0, activebackground=sidePanelColor, command=lambda: switchIndication(indicatorLb=teamsExampleBtnIndicator, page=teamsExample))
+teamsExampleBtn.place(x=6, y=280)
+teamsExampleBtnIndicator = tk.Label(sidePanelFrame, bg=sidePanelColor)
+teamsExampleBtnIndicator.place(x=3, y=285, height=30, width=3)
+teamsExampleLb = tk.Label(sidePanelFrame, text="Teams Example", bg=sidePanelColor, fg="white", font=("Bold", 15), anchor=tk.W)
+teamsExampleLb.place(x=50, y=280, width=200, height=40)
+teamsExampleLb.bind("<Button-1>", lambda e: switchIndication(indicatorLb=teamsExampleBtnIndicator, page=teamsExample))
 
 # panel frame
 sidePanelFrame.pack(side=tk.LEFT, fill=tk.Y)
